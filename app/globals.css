@@ -214,14 +214,17 @@ button:disabled {
 
 .hero-flip-back {
   background: white;
-  gap: 0.8rem;
+  overflow: hidden;
+  padding: 0.35rem;
   transform: rotateY(180deg);
 }
 
 .hero-flip-back img {
   display: block;
-  height: auto;
-  max-width: 86%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  width: 100%;
 }
 
 .hero-card {
@@ -259,10 +262,6 @@ button:disabled {
   letter-spacing: 0.14em;
   margin-top: 0.6rem;
   text-transform: uppercase;
-}
-
-.hero-flip-back small {
-  color: var(--accent);
 }
 
 .section {
