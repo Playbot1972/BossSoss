@@ -59,7 +59,7 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] = [];
+  const lineItems: { price: string; quantity: number }[] = [];
 
   for (const item of body.items) {
     const priceId = getStripePriceIdForVariant(item.variantId);
