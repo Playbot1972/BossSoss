@@ -28,7 +28,7 @@ export function HeroFlipCard({ sauceCount }: { sauceCount: number }) {
         <span className="hero-card hero-flip-face hero-flip-back">
           <img
             alt="Boss Soss BBQ Sauce logo"
-            src="/icons/boss-soss-icon-512.png"
+            src="/icons/boss-soss-logo.png"
           />
         </span>
       </span>
