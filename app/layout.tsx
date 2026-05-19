@@ -4,7 +4,7 @@ import { CartProvider } from "@/components/CartProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Dad's BBQ Sauce",
+  title: "Boss Soss BBQ Sauce",
   description: "Small-batch BBQ sauces, recipes, and smokehouse favorites."
 };
 

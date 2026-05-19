@@ -5,7 +5,7 @@ export function Header() {
   return (
     <header className="site-header">
       <Link className="brand" href="/">
-        Dad&apos;s BBQ Sauce
+        Boss Soss
       </Link>
       <nav aria-label="Main navigation">
         <Link href="/shop">Shop</Link>

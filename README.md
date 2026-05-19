@@ -1,7 +1,9 @@
-# Dad's BBQ Sauce Store
+# Boss Soss BBQ Sauce Store
 
 A standalone Next.js storefront for selling three BBQ sauce flavors in three
 bottle sizes with a cart-based Stripe Checkout flow.
+
+Production domain: `https://bosssoss.us`
 
 ## What is included
 
@@ -43,6 +45,18 @@ Create the products and prices in Stripe:
 
 Paste the nine Stripe price IDs into `.env.local`.
 
+For local development, set:
+
+```bash
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+```
+
+For production, set:
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://bosssoss.us
+```
+
 Run the app:
 
 ```bash
@@ -67,6 +81,18 @@ Checkout currently includes:
 Before going live, confirm:
 
 - Stripe live mode products and prices are configured
+- `https://bosssoss.us` is connected to your hosting provider
+- Stripe Checkout success and cancel redirects use `NEXT_PUBLIC_SITE_URL=https://bosssoss.us`
 - Shipping rate and delivery estimate are correct
 - Stripe Tax is configured before enabling automatic tax
 - Fulfillment process is defined for paid orders
+
+## Domain setup checklist
+
+After deploying the app, connect `bosssoss.us` wherever the app is hosted.
+Typical steps are:
+
+1. Add `bosssoss.us` as a custom domain in the hosting dashboard.
+2. Add the DNS records the host provides at your domain registrar.
+3. Set the production environment variable `NEXT_PUBLIC_SITE_URL=https://bosssoss.us`.
+4. Confirm Stripe Checkout redirects back to `https://bosssoss.us/success`.
