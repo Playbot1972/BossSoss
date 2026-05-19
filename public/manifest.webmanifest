@@ -1,0 +1,30 @@
+{
+  "name": "Boss Soss BBQ Sauce",
+  "short_name": "Boss Soss",
+  "description": "Small-batch BBQ sauces, recipes, and smokehouse favorites.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fff7ed",
+  "theme_color": "#9b2c13",
+  "icons": [
+    {
+      "src": "/icons/boss-soss-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/boss-soss-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/boss-soss-icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

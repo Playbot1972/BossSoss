@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Boss Soss BBQ Sauce logo</title>
+  <desc id="desc">Round black Boss Soss BBQ Sauce badge with red flame and white lettering.</desc>
+  <rect width="1024" height="1024" fill="#ffffff"/>
+  <circle cx="512" cy="512" r="444" fill="#050505"/>
+  <circle cx="512" cy="512" r="424" fill="none" stroke="#ffffff" stroke-width="16"/>
+  <circle cx="512" cy="512" r="396" fill="none" stroke="#ffffff" stroke-width="5"/>
+  <path d="M159 467a356 356 0 0 1 72-190" fill="none" stroke="#e31b23" stroke-width="10"/>
+  <path d="M793 277a356 356 0 0 1 72 190" fill="none" stroke="#e31b23" stroke-width="10"/>
+  <path d="M241 784a356 356 0 0 1-51-72" fill="none" stroke="#e31b23" stroke-width="10"/>
+  <path d="M783 712a356 356 0 0 1-51 72" fill="none" stroke="#e31b23" stroke-width="10"/>
+
+  <g fill="#ffffff" stroke="#ffffff" stroke-linejoin="round" stroke-width="8">
+    <text x="512" y="226" text-anchor="middle" font-family="Arial Black, Impact, sans-serif" font-size="168" font-weight="900" letter-spacing="14" transform="rotate(-7 512 226)">BOSS</text>
+    <text x="512" y="826" text-anchor="middle" font-family="Arial Black, Impact, sans-serif" font-size="168" font-weight="900" letter-spacing="14" transform="rotate(-7 512 826)">SOSS</text>
+  </g>
+
+  <g stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="18">
+    <path d="M248 377l308 308" fill="none"/>
+    <path d="M221 350l78-78 95 95-78 78z" fill="#050505"/>
+    <path d="M257 319l91 91M281 295l91 91M305 271l91 91" fill="none" stroke-width="13"/>
+
+    <path d="M767 333L461 700" fill="none"/>
+    <path d="M699 423c29-40 61-78 94-112 14-14 29 1 18 17l-79 109c-10 14 9 28 21 16l101-98c15-15 32 0 20 18-28 43-61 82-99 117" fill="#050505"/>
+  </g>
+
+  <g>
+    <path d="M514 636c-86 0-157-66-157-148 0-51 28-93 70-121 15 45 43 59 70 27 19-23 25-67-2-115 78 25 91 92 78 143 28-10 54-31 68-72 36 39 49 80 49 121 0 91-74 165-176 165z" fill="#e31b23" stroke="#ffffff" stroke-linejoin="round" stroke-width="10"/>
+    <path d="M515 603c-43 0-79-33-79-73 0-27 16-49 39-62 5 29 19 43 38 22 11-13 14-37 1-67 43 18 51 55 43 85 17-6 32-19 39-43 21 23 29 46 29 69 0 39-36 69-110 69z" fill="#ffffff"/>
+    <path d="M516 603c-22 0-40-17-40-38 0-14 8-26 20-33 2 15 10 22 20 11 6-7 7-19 1-35 23 10 27 30 23 45 9-3 17-10 21-23 11 12 15 24 15 36 0 21-19 37-60 37z" fill="#e31b23"/>
+  </g>
+
+  <g fill="#e31b23">
+    <text x="218" y="590" text-anchor="middle" font-family="Arial Black, Impact, sans-serif" font-size="84" font-weight="900" letter-spacing="6">BBQ</text>
+    <rect x="118" y="498" width="164" height="8"/>
+    <rect x="118" y="608" width="164" height="8"/>
+    <text x="806" y="590" text-anchor="middle" font-family="Arial Black, Impact, sans-serif" font-size="76" font-weight="900" letter-spacing="3">SAUCE</text>
+    <rect x="724" y="498" width="184" height="8"/>
+    <rect x="724" y="608" width="184" height="8"/>
+    <path d="M188 646l14 42 44 1-35 26 13 42-36-25-36 25 13-42-35-26 44-1z"/>
+    <path d="M836 646l14 42 44 1-35 26 13 42-36-25-36 25 13-42-35-26 44-1z"/>
+  </g>
+</svg>
