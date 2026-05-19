@@ -5,6 +5,8 @@ bottle sizes with a cart-based Stripe Checkout flow.
 
 Production domain: `https://bosssoss.us`
 
+Deployment guide: [docs/vercel-deploy.md](docs/vercel-deploy.md)
+
 ## What is included
 
 - Three sauce options: Original Pitmaster, Sweet Heat, and Smoky Gold
@@ -89,10 +91,12 @@ Before going live, confirm:
 
 ## Domain setup checklist
 
-After deploying the app, connect `bosssoss.us` wherever the app is hosted.
-Typical steps are:
+Vercel is the recommended host for this Next.js app. See the full checklist in
+[docs/vercel-deploy.md](docs/vercel-deploy.md). The short version is:
 
-1. Add `bosssoss.us` as a custom domain in the hosting dashboard.
-2. Add the DNS records the host provides at your domain registrar.
+1. Import this GitHub repo into Vercel.
+2. Add `bosssoss.us` as a custom domain in the Vercel dashboard.
 3. Set the production environment variable `NEXT_PUBLIC_SITE_URL=https://bosssoss.us`.
-4. Confirm Stripe Checkout redirects back to `https://bosssoss.us/success`.
+4. Add the Stripe secret key and all nine Stripe price IDs in Vercel.
+5. Add the DNS records Vercel provides at your domain registrar.
+6. Confirm Stripe Checkout redirects back to `https://bosssoss.us/success`.
