@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HeroFlipCard } from "@/components/HeroFlipCard";
 import { sauces } from "@/lib/products";
 
 export default function Home() {
@@ -21,12 +22,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="hero-card" aria-label="Available sauce count">
-          <strong>{sauces.length}</strong>
-          <span>sauces</span>
-          <strong>3</strong>
-          <span>bottle sizes</span>
-        </div>
+        <HeroFlipCard sauceCount={sauces.length} />
       </section>
 
       <section className="section">

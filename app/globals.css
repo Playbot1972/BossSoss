@@ -169,6 +169,61 @@ button:disabled {
   color: var(--foreground);
 }
 
+.hero-flip-card {
+  aspect-ratio: 1;
+  background: transparent;
+  border: 0;
+  border-radius: 2.25rem;
+  box-shadow: none;
+  color: inherit;
+  cursor: pointer;
+  display: block;
+  padding: 0;
+  perspective: 1200px;
+  width: 320px;
+}
+
+.hero-flip-card:hover {
+  background: transparent;
+  transform: none;
+}
+
+.hero-flip-card:focus-visible {
+  outline: 4px solid rgba(246, 180, 75, 0.9);
+  outline-offset: 6px;
+}
+
+.hero-flip-card-inner {
+  display: block;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 650ms cubic-bezier(0.2, 0.75, 0.2, 1);
+  width: 100%;
+}
+
+.hero-flip-card.is-flipped .hero-flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.hero-flip-face {
+  backface-visibility: hidden;
+  inset: 0;
+  position: absolute;
+}
+
+.hero-flip-back {
+  background: white;
+  gap: 0.8rem;
+  transform: rotateY(180deg);
+}
+
+.hero-flip-back img {
+  display: block;
+  height: auto;
+  max-width: 86%;
+}
+
 .hero-card {
   aspect-ratio: 1;
   background:
@@ -195,6 +250,19 @@ button:disabled {
   font-weight: 800;
   margin-bottom: 1.2rem;
   text-transform: uppercase;
+}
+
+.hero-card small {
+  color: rgba(255, 231, 196, 0.85);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  margin-top: 0.6rem;
+  text-transform: uppercase;
+}
+
+.hero-flip-back small {
+  color: var(--accent);
 }
 
 .section {
@@ -424,6 +492,15 @@ button:disabled {
 
   .hero-card {
     aspect-ratio: auto;
+  }
+
+  .hero-flip-card {
+    max-width: 320px;
+    width: 100%;
+  }
+
+  .hero-flip-card .hero-card {
+    aspect-ratio: 1;
   }
 
   .cart-line {
