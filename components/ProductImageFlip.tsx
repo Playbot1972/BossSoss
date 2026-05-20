@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { SpinningOrb } from "./SpinningOrb";
 
 type ProductImageFlipProps = {
@@ -14,42 +14,76 @@ export function ProductImageFlip({
   backImageAlt,
   backImageSrc
 }: ProductImageFlipProps) {
-  const [isFlipped, setIsFlipped] = useState(false);
+  const [showBack, setShowBack] = useState(false);
+  const [isFlipping, setIsFlipping] = useState(false);
+  const timeouts = useRef<number[]>([]);
   const canFlip = Boolean(backImageSrc);
+
+  useEffect(() => {
+    return () => {
+      timeouts.current.forEach(window.clearTimeout);
+    };
+  }, []);
+
+  const flipProductImage = () => {
+    if (!canFlip || isFlipping) {
+      return;
+    }
+
+    timeouts.current.forEach(window.clearTimeout);
+    timeouts.current = [];
+
+    setIsFlipping(true);
+
+    timeouts.current.push(
+      window.setTimeout(() => {
+        setShowBack((current) => !current);
+      }, 325)
+    );
+
+    timeouts.current.push(
+      window.setTimeout(() => {
+        setIsFlipping(false);
+      }, 650)
+    );
+  };
 
   return (
     <button
       type="button"
       className={`product-image product-image-flip${
-        isFlipped ? " is-flipped" : ""
+        isFlipping ? " is-flipping" : ""
       }`}
-      onClick={() => {
-        if (canFlip) {
-          setIsFlipped((current) => !current);
-        }
-      }}
+      onClick={flipProductImage}
       aria-label={
         canFlip
           ? `${backImageAlt}. Tap to flip product graphic.`
           : `${initials} sauce graphic`
       }
-      aria-pressed={canFlip ? isFlipped : undefined}
+      aria-pressed={canFlip ? showBack : undefined}
       disabled={!canFlip}
     >
       <span className="product-image-flip-inner">
-        <span className="product-image-face product-image-front">
-          <span className="sauce-initials-pill orb-orbit-target">
-            <SpinningOrb size="md" />
-            {initials}
+        <span
+          className={`product-image-content${
+            showBack ? " product-image-content-back" : ""
+          }`}
+        >
+          {showBack && backImageSrc ? (
+            <>
+              <img src={backImageSrc} alt={backImageAlt} />
+              <small>Tap to return</small>
+            </>
+          ) : (
+            <>
+              <span className="sauce-initials-pill orb-orbit-target">
+                <SpinningOrb size="md" />
+                {initials}
+              </span>
+              {canFlip ? <small>Tap to flip</small> : null}
+            </>
+          )}
           </span>
-          {canFlip ? <small>Tap / hover to flip</small> : null}
-        </span>
-        {backImageSrc ? (
-          <span className="product-image-face product-image-back">
-            <img src={backImageSrc} alt={backImageAlt} />
-            <small>Tap to return</small>
-          </span>
-        ) : null}
       </span>
     </button>
   );
