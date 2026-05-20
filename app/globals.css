@@ -46,8 +46,8 @@ body {
 
 :root[data-theme="dark"] body {
   background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.72)),
-    url("/images/smoking-grill-bg.svg") center / cover fixed,
+    linear-gradient(180deg, rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.68)),
+    url("/images/bbq.png") center / cover fixed,
     var(--background);
 }
 
