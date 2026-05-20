@@ -10,7 +10,7 @@ const getStableOrbSpeed = (variantId: string) => {
     0
   );
 
-  return 1.8 + (hash % 9) * 0.17;
+  return 3.2 + (hash % 9) * 0.3;
 };
 
 export function AddToCartButton({ variantId }: { variantId: string }) {

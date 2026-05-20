@@ -283,7 +283,7 @@ button:disabled {
 .spinning-orb {
   animation:
     orb-trace-pill var(--orb-speed, 2.6s) linear infinite,
-    orb-pulse 2.4s ease-in-out infinite;
+    orb-pulse 4.3s ease-in-out infinite;
   aspect-ratio: 1;
   border: 2px solid rgba(255, 255, 255, 0.72);
   border-radius: 999px;
@@ -302,7 +302,7 @@ button:disabled {
 }
 
 .spinning-orb::before {
-  animation: orb-spin 1.1s linear infinite;
+  animation: orb-spin 2s linear infinite;
   background:
     radial-gradient(circle at 32% 30%, #ffffff 0 8%, transparent 9%),
     conic-gradient(from 0deg, #ffffff, #f6b44b, #e31b23, #6f1f0e, #ffffff);
@@ -322,19 +322,19 @@ button:disabled {
 .orb-sm {
   --orb-inset: -0.32rem;
   --orb-size: 0.95rem;
-  --orb-speed: 2.2s;
+  --orb-speed: 4s;
 }
 
 .orb-md {
   --orb-inset: -0.45rem;
   --orb-size: 1.25rem;
-  --orb-speed: 2.5s;
+  --orb-speed: 4.5s;
 }
 
 .orb-lg {
   --orb-inset: -0.62rem;
   --orb-size: 1.55rem;
-  --orb-speed: 3.2s;
+  --orb-speed: 5.8s;
 }
 
 @keyframes orb-trace-pill {
