@@ -1,21 +1,21 @@
 const recipes = [
   {
-    title: "Sticky Sweet Heat Wings",
-    sauce: "Sweet Heat",
+    title: "Sticky Kick Dog Wings",
+    sauce: "Kick Dog Soss",
     time: "45 minutes",
     steps: [
       "Season wings with salt, pepper, garlic powder, and smoked paprika.",
       "Bake or smoke until cooked through and crisp at the edges.",
-      "Toss with warmed Sweet Heat sauce and finish over high heat for 3 minutes."
+      "Toss with warmed Kick Dog Soss and finish over high heat for 3 minutes."
     ]
   },
   {
-    title: "Original Pitmaster Pulled Pork Sandwiches",
-    sauce: "Original Pitmaster",
+    title: "Short Dog Soss Pulled Pork Sandwiches",
+    sauce: "Short Dog Soss",
     time: "20 minutes after pork is cooked",
     steps: [
       "Warm pulled pork with a splash of apple cider vinegar.",
-      "Fold in Original Pitmaster sauce until glossy.",
+      "Fold in Short Dog Soss until glossy.",
       "Serve on buns with slaw, pickles, and extra sauce on the side."
     ]
   },

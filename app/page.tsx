@@ -35,7 +35,7 @@ export default function Home() {
           <article>
             <span>01</span>
             <h2>Pick a flavor</h2>
-            <p>Original Pitmaster, Sweet Heat, or Smoky Gold.</p>
+            <p>Short Dog Soss, Kick Dog Soss, or Smoky Gold.</p>
           </article>
           <article>
             <span>02</span>

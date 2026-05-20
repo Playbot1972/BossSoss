@@ -17,7 +17,7 @@ const stripe = new Stripe(stripeSecretKey);
 const sauces = [
   {
     id: "original",
-    name: "Original Pitmaster",
+    name: "Short Dog Soss",
     description:
       "A classic tomato-based BBQ sauce with brown sugar, vinegar, and a slow pepper finish.",
     envPrefix: "STRIPE_PRICE_ORIGINAL",
@@ -29,7 +29,7 @@ const sauces = [
   },
   {
     id: "sweet-heat",
-    name: "Sweet Heat",
+    name: "Kick Dog Soss",
     description:
       "Sweet, sticky, and finished with a warm chili kick for wings, pulled pork, and burgers.",
     envPrefix: "STRIPE_PRICE_SWEET_HEAT",

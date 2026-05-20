@@ -13,7 +13,7 @@ Visitor counter guide: [docs/visitor-counter.md](docs/visitor-counter.md)
 
 ## What is included
 
-- Three sauce options: Original Pitmaster, Sweet Heat, and Smoky Gold
+- Three sauce options: Short Dog Soss, Kick Dog Soss, and Smoky Gold
 - Three sizes per sauce: 8 oz, 16 oz, and 32 oz
 - Browser cart with quantity updates and local storage persistence
 - Stripe Checkout API route for payment, shipping address collection, and optional Stripe Tax
@@ -36,11 +36,11 @@ cp .env.example .env.local
 
 Create the products and prices in Stripe:
 
-1. Product: Original Pitmaster
+1. Product: Short Dog Soss
    - 8 oz price
    - 16 oz price
    - 32 oz price
-2. Product: Sweet Heat
+2. Product: Kick Dog Soss
    - 8 oz price
    - 16 oz price
    - 32 oz price

@@ -6,8 +6,8 @@ Use this checklist after the Vercel domain is live.
 
 Create 3 products in Stripe:
 
-1. Original Pitmaster
-2. Sweet Heat
+1. Short Dog Soss
+2. Kick Dog Soss
 3. Smoky Gold
 
 Each product needs 3 one-time prices:
@@ -27,8 +27,8 @@ STRIPE_SECRET_KEY=sk_test_replace_me npm run stripe:create-products
 
 The script creates or updates:
 
-- Original Pitmaster
-- Sweet Heat
+- Short Dog Soss
+- Kick Dog Soss
 - Smoky Gold
 
 It then writes the 9 generated price IDs to:

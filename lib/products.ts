@@ -46,8 +46,8 @@ const buildVariant = (
 export const sauces: Sauce[] = [
   {
     id: "original",
-    name: "Original Pitmaster",
-    tagline: "Balanced, tangy, and built for ribs.",
+    name: "Short Dog Soss",
+    tagline: "The original Boss Soss flavor.",
     description:
       "A classic tomato-based BBQ sauce with brown sugar, vinegar, and a slow pepper finish.",
     sizes: [
@@ -58,8 +58,8 @@ export const sauces: Sauce[] = [
   },
   {
     id: "sweet-heat",
-    name: "Sweet Heat",
-    tagline: "A little honey up front, a little fire after.",
+    name: "Kick Dog Soss",
+    tagline: "Spicy sauce with a warm backyard bite.",
     description:
       "Sweet, sticky, and finished with a warm chili kick for wings, pulled pork, and burgers.",
     sizes: [
