@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 const logoImage = "/icons/boss-soss-logo.png";
 const pitmasterImage = "/images/pitmaster.jpg";
-const surpriseImages = ["/images/jerk-rib.svg", "/images/sweet-heat.svg"];
+const surpriseImages = ["/images/jerk-rib.png", "/images/sweet.jpg"];
 
 export function HeaderImageSpinner() {
   const [imageSrc, setImageSrc] = useState(pitmasterImage);
