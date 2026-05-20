@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useCart } from "./CartProvider";
+import { SpinningOrb } from "./SpinningOrb";
 
 export function AddToCartButton({ variantId }: { variantId: string }) {
   const [quantity, setQuantity] = useState(1);
@@ -31,6 +32,7 @@ export function AddToCartButton({ variantId }: { variantId: string }) {
           window.setTimeout(() => setAdded(false), 1800);
         }}
       >
+        <SpinningOrb size="sm" />
         {added ? "Added" : "Add to cart"}
       </button>
     </div>

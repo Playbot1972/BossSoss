@@ -1,15 +1,19 @@
 import { Sauce, formatCurrency } from "@/lib/products";
 import { AddToCartButton } from "./AddToCartButton";
+import { SpinningOrb } from "./SpinningOrb";
 
 export function ProductCard({ sauce }: { sauce: Sauce }) {
   return (
     <article className="product-card">
       <div className="product-image" aria-hidden="true">
-        {sauce.name
-          .split(" ")
-          .map((word) => word[0])
-          .join("")
-          .slice(0, 2)}
+        <SpinningOrb size="lg" />
+        <span className="sauce-initials-pill">
+          {sauce.name
+            .split(" ")
+            .map((word) => word[0])
+            .join("")
+            .slice(0, 2)}
+        </span>
       </div>
       <div>
         <p className="eyebrow">{sauce.tagline}</p>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { SpinningOrb } from "./SpinningOrb";
 
 export function HeroFlipCard({ sauceCount }: { sauceCount: number }) {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -19,6 +20,9 @@ export function HeroFlipCard({ sauceCount }: { sauceCount: number }) {
     >
       <span className="hero-flip-card-inner">
         <span className="hero-card hero-flip-face hero-flip-front">
+          <span className="hero-card-orb">
+            <SpinningOrb size="lg" />
+          </span>
           <strong>{sauceCount}</strong>
           <span>sauces</span>
           <strong>3</strong>

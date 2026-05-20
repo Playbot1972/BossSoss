@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { HeroFlipCard } from "@/components/HeroFlipCard";
+import { SpinningOrb } from "@/components/SpinningOrb";
 import { sauces } from "@/lib/products";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <Link className="button" href="/shop">
+              <SpinningOrb size="sm" />
               Shop sauces
             </Link>
             <Link className="button secondary" href="/recipes">
