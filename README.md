@@ -7,6 +7,8 @@ Production domain: `https://bosssoss.us`
 
 Deployment guide: [docs/vercel-deploy.md](docs/vercel-deploy.md)
 
+Stripe go-live guide: [docs/stripe-go-live.md](docs/stripe-go-live.md)
+
 ## What is included
 
 - Three sauce options: Original Pitmaster, Sweet Heat, and Smoky Gold
@@ -79,6 +81,15 @@ Checkout currently includes:
 - Optional automatic tax with `STRIPE_AUTOMATIC_TAX=true`
 - Promotion code support
 - Phone number collection
+
+Readiness check:
+
+```text
+https://bosssoss.us/api/readiness
+```
+
+This endpoint reports whether required Stripe environment variables are present
+without exposing secret values.
 
 Before going live, confirm:
 
