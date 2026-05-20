@@ -187,6 +187,36 @@ button:disabled {
   color: var(--foreground);
 }
 
+.hero-visuals {
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.pitmaster-photo {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1.6rem;
+  box-shadow: var(--shadow);
+  margin: 0;
+  max-width: 250px;
+  overflow: hidden;
+  padding: 0.45rem;
+  transform: rotate(2deg);
+  width: min(74vw, 250px);
+}
+
+.pitmaster-photo img {
+  aspect-ratio: 4 / 5;
+  border-radius: 1.15rem;
+  display: block;
+  height: auto;
+  object-fit: cover;
+  object-position: center top;
+  width: 100%;
+}
+
 .hero-flip-card {
   aspect-ratio: 1;
   background: transparent;
@@ -505,6 +535,15 @@ button:disabled {
   .hero {
     min-height: auto;
     padding: 2rem 0;
+  }
+
+  .hero-visuals {
+    justify-items: start;
+  }
+
+  .pitmaster-photo {
+    max-width: 220px;
+    width: min(70vw, 220px);
   }
 
   .hero-card {

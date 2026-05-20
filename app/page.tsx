@@ -22,7 +22,12 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <HeroFlipCard sauceCount={sauces.length} />
+        <div className="hero-visuals">
+          <figure className="pitmaster-photo">
+            <img src="/images/pitmaster.jpg" alt="Boss Soss pitmaster" />
+          </figure>
+          <HeroFlipCard sauceCount={sauces.length} />
+        </div>
       </section>
 
       <section className="section">
