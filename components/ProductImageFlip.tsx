@@ -47,6 +47,7 @@ export function ProductImageFlip({
         {backImageSrc ? (
           <span className="product-image-face product-image-back">
             <img src={backImageSrc} alt={backImageAlt} />
+            <small>Tap to return</small>
           </span>
         ) : null}
       </span>

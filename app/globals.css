@@ -609,24 +609,13 @@ button:disabled {
   display: block;
   height: 100%;
   position: relative;
-  transform-style: preserve-3d;
-  transition: transform 650ms cubic-bezier(0.2, 0.75, 0.2, 1);
+  perspective: 1100px;
   width: 100%;
   z-index: 1;
 }
 
-.product-image-flip.is-flipped .product-image-flip-inner {
-  transform: rotateY(180deg);
-}
-
-.product-image-flip:not(:disabled):hover .product-image-flip-inner,
-.product-image-flip:not(:disabled):focus-visible .product-image-flip-inner {
-  transform: rotateY(180deg);
-}
-
 .product-image-face {
   align-items: center;
-  backface-visibility: hidden;
   border-radius: 0.9rem;
   display: grid;
   gap: 0.65rem;
@@ -634,6 +623,9 @@ button:disabled {
   justify-content: center;
   overflow: hidden;
   position: absolute;
+  transition:
+    opacity 220ms ease,
+    transform 650ms cubic-bezier(0.2, 0.75, 0.2, 1);
 }
 
 .product-image-front small {
@@ -646,7 +638,8 @@ button:disabled {
 
 .product-image-back {
   background: #050505;
-  transform: rotateY(180deg);
+  opacity: 0;
+  transform: rotateY(-180deg);
 }
 
 .product-image-back img {
@@ -655,6 +648,32 @@ button:disabled {
   object-fit: cover;
   object-position: center;
   width: 100%;
+}
+
+.product-image-back small {
+  background: rgba(5, 5, 5, 0.72);
+  border-radius: 999px;
+  bottom: 0.75rem;
+  color: #fff7ed;
+  font-size: 0.72rem;
+  font-weight: 900;
+  left: 50%;
+  letter-spacing: 0.12em;
+  padding: 0.45rem 0.7rem;
+  position: absolute;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.product-image-flip.is-flipped .product-image-front {
+  opacity: 0;
+  transform: rotateY(180deg);
+}
+
+.product-image-flip.is-flipped .product-image-back {
+  opacity: 1;
+  transform: rotateY(0deg);
 }
 
 .sauce-initials-pill {
