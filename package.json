@@ -9,6 +9,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "stripe:create-products": "node scripts/create-stripe-products.mjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

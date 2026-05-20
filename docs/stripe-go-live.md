@@ -18,6 +18,27 @@ Each product needs 3 one-time prices:
 
 That creates 9 Stripe price IDs.
 
+You can create them automatically from this repo if you have your Stripe secret
+key:
+
+```bash
+STRIPE_SECRET_KEY=sk_test_replace_me npm run stripe:create-products
+```
+
+The script creates or updates:
+
+- Original Pitmaster
+- Sweet Heat
+- Smoky Gold
+
+It then writes the 9 generated price IDs to:
+
+```text
+stripe-products.env
+```
+
+That file is ignored by git. Copy those values into Vercel.
+
 ## 2. Add Vercel production environment variables
 
 In Vercel, open **Project -> Settings -> Environment Variables** and add these

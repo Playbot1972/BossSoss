@@ -49,6 +49,14 @@ Create the products and prices in Stripe:
 
 Paste the nine Stripe price IDs into `.env.local`.
 
+Or create them with the helper script:
+
+```bash
+STRIPE_SECRET_KEY=sk_test_replace_me npm run stripe:create-products
+```
+
+The script writes the generated price IDs to `stripe-products.env`.
+
 For local development, set:
 
 ```bash
