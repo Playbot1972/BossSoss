@@ -40,7 +40,7 @@ export function HeaderImageSpinner() {
     timeouts.current.push(
       window.setTimeout(() => {
         setImageSrc(logoImage);
-      }, 1500)
+      }, 3900)
     );
   };
 
