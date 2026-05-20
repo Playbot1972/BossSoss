@@ -8,9 +8,6 @@ export default function Home() {
     <>
       <section className="hero">
         <div className="hero-copy">
-          <figure className="pitmaster-photo">
-            <img src="/images/pitmaster.jpg" alt="Boss Soss pitmaster" />
-          </figure>
           <p className="eyebrow">Small batch. Big backyard flavor.</p>
           <h1>BBQ sauce made for family cookouts and weeknight dinners.</h1>
           <p>
