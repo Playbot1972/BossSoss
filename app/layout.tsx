@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Header } from "@/components/Header";
 import { CartProvider } from "@/components/CartProvider";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import { VisitorCounter } from "@/components/VisitorCounter";
 import { appVersion } from "@/lib/app-version";
 import "./globals.css";
@@ -50,14 +51,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <CartProvider>
-          <Header />
-          <main>{children}</main>
-          <VisitorCounter />
-          <div className="app-version" aria-label={`Site version ${appVersion}`}>
-            {appVersion}
-          </div>
-        </CartProvider>
+        <ThemeProvider>
+          <CartProvider>
+            <Header />
+            <main>{children}</main>
+            <VisitorCounter />
+            <div className="app-version" aria-label={`Site version ${appVersion}`}>
+              {appVersion}
+            </div>
+          </CartProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

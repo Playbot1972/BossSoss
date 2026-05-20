@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CartLink } from "./CartLink";
 import { HeaderImageSpinner } from "./HeaderImageSpinner";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function Header() {
   return (
@@ -13,6 +14,7 @@ export function Header() {
           <Link href="/shop">Shop</Link>
           <Link href="/recipes">Recipes</Link>
           <CartLink />
+          <ThemeToggle />
         </nav>
       </div>
       <HeaderImageSpinner />
