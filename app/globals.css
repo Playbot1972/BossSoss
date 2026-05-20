@@ -666,7 +666,8 @@ button:disabled {
 
   .site-header {
     display: grid;
-    grid-template-columns: 1fr;
+    gap: 1rem;
+    grid-template-columns: minmax(8.5rem, 1fr) minmax(10rem, 42vw);
   }
 
   .header-left {
@@ -675,9 +676,9 @@ button:disabled {
 
   .header-pitmaster {
     border-radius: 1.65rem;
-    justify-self: start;
+    justify-self: end;
     max-width: 24rem;
-    width: min(86vw, 24rem);
+    width: min(42vw, 24rem);
   }
 
   .hero,
@@ -718,5 +719,20 @@ button:disabled {
 
   .cart-line {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .site-header {
+    grid-template-columns: minmax(7rem, 1fr) minmax(8rem, 44vw);
+  }
+
+  .site-header nav {
+    gap: 0.65rem;
+  }
+
+  .header-pitmaster {
+    border-radius: 1.25rem;
+    width: min(44vw, 12rem);
   }
 }
