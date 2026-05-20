@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Header } from "@/components/Header";
 import { CartProvider } from "@/components/CartProvider";
+import { VisitorCounter } from "@/components/VisitorCounter";
 import { appVersion } from "@/lib/app-version";
 import "./globals.css";
 
@@ -52,6 +53,7 @@ export default function RootLayout({
         <CartProvider>
           <Header />
           <main>{children}</main>
+          <VisitorCounter />
           <div className="app-version" aria-label={`Site version ${appVersion}`}>
             {appVersion}
           </div>
