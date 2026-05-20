@@ -130,11 +130,11 @@ main {
   }
 
   42% {
-    transform: rotate(210deg) scale(1.04);
+    transform: rotate(-210deg) scale(1.04);
   }
 
   100% {
-    transform: rotate(720deg) scale(1);
+    transform: rotate(-720deg) scale(1);
   }
 }
 
@@ -267,6 +267,18 @@ button:disabled {
   z-index: 3;
 }
 
+.orb-orbit::before {
+  border: 2px solid rgba(246, 180, 75, 0.72);
+  border-radius: inherit;
+  box-shadow:
+    0 0 0 1px rgba(227, 27, 35, 0.22),
+    0 0 18px rgba(246, 180, 75, 0.36),
+    inset 0 0 14px rgba(227, 27, 35, 0.18);
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
 .spinning-orb {
   aspect-ratio: 1;
   border: 2px solid rgba(255, 255, 255, 0.72);
@@ -282,6 +294,7 @@ button:disabled {
   top: 50%;
   transform: translate(50%, -50%);
   width: var(--orb-size);
+  z-index: 1;
 }
 
 .spinning-orb::before {
