@@ -565,8 +565,10 @@ button:disabled {
   align-items: center;
   aspect-ratio: 1.4;
   background: linear-gradient(135deg, #4a1f10, #b23b1e 55%, #f6b44b);
+  border: 0;
   border-radius: 1.1rem;
   color: white;
+  cursor: pointer;
   display: grid;
   font-size: 4rem;
   font-weight: 900;
@@ -576,6 +578,12 @@ button:disabled {
   overflow: hidden;
   padding: 1.25rem;
   position: relative;
+  width: 100%;
+}
+
+.product-image:disabled {
+  cursor: default;
+  opacity: 1;
 }
 
 .product-image::before {
@@ -585,6 +593,63 @@ button:disabled {
   content: "";
   inset: 0;
   position: absolute;
+}
+
+.product-image:hover {
+  background: linear-gradient(135deg, #4a1f10, #b23b1e 55%, #f6b44b);
+  transform: none;
+}
+
+.product-image:focus-visible {
+  outline: 4px solid rgba(246, 180, 75, 0.9);
+  outline-offset: 5px;
+}
+
+.product-image-flip-inner {
+  display: block;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 650ms cubic-bezier(0.2, 0.75, 0.2, 1);
+  width: 100%;
+  z-index: 1;
+}
+
+.product-image-flip.is-flipped .product-image-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.product-image-face {
+  align-items: center;
+  backface-visibility: hidden;
+  border-radius: 0.9rem;
+  display: grid;
+  gap: 0.65rem;
+  inset: 0;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+}
+
+.product-image-front small {
+  color: rgba(255, 247, 237, 0.86);
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.product-image-back {
+  background: #050505;
+  transform: rotateY(180deg);
+}
+
+.product-image-back img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
 }
 
 .sauce-initials-pill {

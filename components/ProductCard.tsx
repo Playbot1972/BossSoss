@@ -1,20 +1,25 @@
 import { Sauce, formatCurrency } from "@/lib/products";
 import { AddToCartButton } from "./AddToCartButton";
-import { SpinningOrb } from "./SpinningOrb";
+import { ProductImageFlip } from "./ProductImageFlip";
+
+const sauceBackImages: Partial<Record<Sauce["id"], string>> = {
+  original: "/images/sauce-pot.jpg"
+};
 
 export function ProductCard({ sauce }: { sauce: Sauce }) {
+  const initials = sauce.name
+    .split(" ")
+    .map((word) => word[0])
+    .join("")
+    .slice(0, 2);
+
   return (
     <article className="product-card">
-      <div className="product-image" aria-hidden="true">
-        <span className="sauce-initials-pill orb-orbit-target">
-          <SpinningOrb size="md" />
-          {sauce.name
-            .split(" ")
-            .map((word) => word[0])
-            .join("")
-            .slice(0, 2)}
-        </span>
-      </div>
+      <ProductImageFlip
+        initials={initials}
+        backImageAlt={`${sauce.name} sauce graphic`}
+        backImageSrc={sauceBackImages[sauce.id]}
+      />
       <div>
         <p className="eyebrow">{sauce.tagline}</p>
         <h2>{sauce.name}</h2>
