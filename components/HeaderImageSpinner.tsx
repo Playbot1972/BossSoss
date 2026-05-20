@@ -8,7 +8,7 @@ const surpriseImages = ["/images/jerk-rib.png", "/images/sweet.jpg"];
 
 export function HeaderImageSpinner() {
   const [imageSrc, setImageSrc] = useState(pitmasterImage);
-  const [isSpinning, setIsSpinning] = useState(false);
+  const [isFlipping, setIsFlipping] = useState(false);
   const timeouts = useRef<number[]>([]);
 
   useEffect(() => {
@@ -17,8 +17,8 @@ export function HeaderImageSpinner() {
     };
   }, []);
 
-  const spinToLogo = () => {
-    if (isSpinning) {
+  const flipToLogo = () => {
+    if (isFlipping) {
       return;
     }
 
@@ -28,12 +28,12 @@ export function HeaderImageSpinner() {
     const randomGraphic =
       surpriseImages[Math.floor(Math.random() * surpriseImages.length)];
 
-    setIsSpinning(true);
+    setIsFlipping(true);
     setImageSrc(randomGraphic);
 
     timeouts.current.push(
       window.setTimeout(() => {
-        setIsSpinning(false);
+        setIsFlipping(false);
       }, 900)
     );
 
@@ -47,9 +47,9 @@ export function HeaderImageSpinner() {
   return (
     <button
       type="button"
-      className={`header-pitmaster-button${isSpinning ? " is-spinning" : ""}`}
-      onClick={spinToLogo}
-      aria-label="Spin pitmaster image and reveal Boss Soss logo"
+      className={`header-pitmaster-button${isFlipping ? " is-flipping" : ""}`}
+      onClick={flipToLogo}
+      aria-label="Flip pitmaster image and reveal Boss Soss logo"
     >
       <img className="header-pitmaster" src={imageSrc} alt="Boss Soss feature" />
     </button>
