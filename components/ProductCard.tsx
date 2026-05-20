@@ -3,7 +3,9 @@ import { AddToCartButton } from "./AddToCartButton";
 import { ProductImageFlip } from "./ProductImageFlip";
 
 const sauceBackImages: Partial<Record<Sauce["id"], string>> = {
-  original: "/images/sauce-pot.jpg"
+  original: "/images/sauce-pot.jpg",
+  "sweet-heat": "/images/sauce-spoon.jpg",
+  "smoky-gold": "/images/pour-sauce.webp"
 };
 
 export function ProductCard({ sauce }: { sauce: Sauce }) {
