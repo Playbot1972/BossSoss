@@ -564,7 +564,11 @@ button:disabled {
 .product-image {
   align-items: center;
   aspect-ratio: 1.4;
-  background: linear-gradient(135deg, #4a1f10, #b23b1e 55%, #f6b44b);
+  background:
+    linear-gradient(135deg, #4a1f10, #b23b1e 55%, #f6b44b),
+    var(--product-back-image, none);
+  background-position: center;
+  background-size: cover;
   border: 0;
   border-radius: 1.1rem;
   color: white;
@@ -596,8 +600,24 @@ button:disabled {
 }
 
 .product-image:hover {
-  background: linear-gradient(135deg, #4a1f10, #b23b1e 55%, #f6b44b);
   transform: none;
+}
+
+.product-image.is-showing-back {
+  background:
+    linear-gradient(0deg, rgba(5, 5, 5, 0.12), rgba(5, 5, 5, 0.12)),
+    var(--product-back-image),
+    linear-gradient(135deg, #4a1f10, #b23b1e 55%, #f6b44b);
+  background-position: center;
+  background-size: cover;
+}
+
+.product-image.is-showing-back::before {
+  background: linear-gradient(
+    180deg,
+    rgba(5, 5, 5, 0.02),
+    rgba(5, 5, 5, 0.18)
+  );
 }
 
 .product-image:focus-visible {
@@ -637,19 +657,7 @@ button:disabled {
   text-transform: uppercase;
 }
 
-.product-image-content-back {
-  background: #050505;
-}
-
-.product-image-content-back img {
-  display: block;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  width: 100%;
-}
-
-.product-image-content-back small {
+.product-image.is-showing-back .product-image-content small {
   background: rgba(5, 5, 5, 0.72);
   border-radius: 999px;
   bottom: 0.75rem;

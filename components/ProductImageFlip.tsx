@@ -1,5 +1,6 @@
 "use client";
 
+import type { CSSProperties } from "react";
 import { useEffect, useRef, useState } from "react";
 import { SpinningOrb } from "./SpinningOrb";
 
@@ -7,6 +8,10 @@ type ProductImageFlipProps = {
   initials: string;
   backImageAlt: string;
   backImageSrc?: string;
+};
+
+type ProductImageStyle = CSSProperties & {
+  "--product-back-image"?: string;
 };
 
 export function ProductImageFlip({
@@ -18,6 +23,9 @@ export function ProductImageFlip({
   const [isFlipping, setIsFlipping] = useState(false);
   const timeouts = useRef<number[]>([]);
   const canFlip = Boolean(backImageSrc);
+  const style: ProductImageStyle | undefined = backImageSrc
+    ? { "--product-back-image": `url("${backImageSrc}")` }
+    : undefined;
 
   useEffect(() => {
     return () => {
@@ -53,27 +61,24 @@ export function ProductImageFlip({
       type="button"
       className={`product-image product-image-flip${
         isFlipping ? " is-flipping" : ""
+      }${showBack ? " is-showing-back" : ""
       }`}
       onClick={flipProductImage}
       aria-label={
         canFlip
-          ? `${backImageAlt}. Tap to flip product graphic.`
+          ? `${showBack ? backImageAlt : initials}. Tap to flip product graphic.`
           : `${initials} sauce graphic`
       }
       aria-pressed={canFlip ? showBack : undefined}
       disabled={!canFlip}
+      style={style}
     >
       <span className="product-image-flip-inner">
         <span
-          className={`product-image-content${
-            showBack ? " product-image-content-back" : ""
-          }`}
+          className="product-image-content"
         >
-          {showBack && backImageSrc ? (
-            <>
-              <img src={backImageSrc} alt={backImageAlt} />
-              <small>Tap to return</small>
-            </>
+          {showBack ? (
+            <small>Tap to return</small>
           ) : (
             <>
               <span className="sauce-initials-pill orb-orbit-target">
