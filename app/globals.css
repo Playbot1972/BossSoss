@@ -87,14 +87,14 @@ main {
 
 .header-pitmaster {
   aspect-ratio: 1;
-  border: 2px solid var(--border);
-  border-radius: 1rem;
-  box-shadow: 0 10px 24px rgba(87, 38, 17, 0.14);
+  border: 3px solid var(--border);
+  border-radius: 1.45rem;
+  box-shadow: 0 16px 34px rgba(87, 38, 17, 0.18);
   display: block;
-  height: 4.25rem;
+  height: 9.5rem;
   object-fit: cover;
   object-position: center top;
-  width: 4.25rem;
+  width: 9.5rem;
 }
 
 .site-header nav {
@@ -666,8 +666,8 @@ button:disabled {
   }
 
   .header-pitmaster {
-    height: 3.5rem;
-    width: 3.5rem;
+    height: 7rem;
+    width: 7rem;
   }
 
   .hero,
