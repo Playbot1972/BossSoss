@@ -261,12 +261,10 @@ button:disabled {
 }
 
 .orb-orbit {
-  animation: orb-orbit-ccw var(--orb-speed, 2.6s) linear infinite;
   border-radius: inherit;
   inset: var(--orb-inset, -0.38rem);
   pointer-events: none;
   position: absolute;
-  transform-origin: center;
   z-index: 3;
 }
 
@@ -283,6 +281,9 @@ button:disabled {
 }
 
 .spinning-orb {
+  animation:
+    orb-trace-pill var(--orb-speed, 2.6s) linear infinite,
+    orb-pulse 2.4s ease-in-out infinite;
   aspect-ratio: 1;
   border: 2px solid rgba(255, 255, 255, 0.72);
   border-radius: 999px;
@@ -293,9 +294,9 @@ button:disabled {
   display: block;
   overflow: hidden;
   position: absolute;
-  right: 0;
+  left: 100%;
   top: 50%;
-  transform: translate(50%, -50%);
+  transform: translate(-50%, -50%);
   width: var(--orb-size);
   z-index: 1;
 }
@@ -336,9 +337,50 @@ button:disabled {
   --orb-speed: 3.2s;
 }
 
-@keyframes orb-orbit-ccw {
-  to {
-    transform: rotate(-360deg);
+@keyframes orb-trace-pill {
+  0% {
+    left: 100%;
+    top: 50%;
+  }
+
+  12.5% {
+    left: 100%;
+    top: 0;
+  }
+
+  25% {
+    left: 50%;
+    top: 0;
+  }
+
+  37.5% {
+    left: 0;
+    top: 0;
+  }
+
+  50% {
+    left: 0;
+    top: 50%;
+  }
+
+  62.5% {
+    left: 0;
+    top: 100%;
+  }
+
+  75% {
+    left: 50%;
+    top: 100%;
+  }
+
+  87.5% {
+    left: 100%;
+    top: 100%;
+  }
+
+  100% {
+    left: 100%;
+    top: 50%;
   }
 }
 
@@ -603,7 +645,6 @@ button:disabled {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .orb-orbit,
   .spinning-orb {
     animation: none;
   }
