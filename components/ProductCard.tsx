@@ -6,8 +6,8 @@ export function ProductCard({ sauce }: { sauce: Sauce }) {
   return (
     <article className="product-card">
       <div className="product-image" aria-hidden="true">
-        <SpinningOrb size="lg" />
-        <span className="sauce-initials-pill">
+        <span className="sauce-initials-pill orb-orbit-target">
+          <SpinningOrb size="md" />
           {sauce.name
             .split(" ")
             .map((word) => word[0])

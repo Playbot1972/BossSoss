@@ -3,5 +3,9 @@ type SpinningOrbProps = {
 };
 
 export function SpinningOrb({ size = "md" }: SpinningOrbProps) {
-  return <span aria-hidden="true" className={`spinning-orb orb-${size}`} />;
+  return (
+    <span aria-hidden="true" className={`orb-orbit orb-${size}`}>
+      <span className="spinning-orb" />
+    </span>
+  );
 }

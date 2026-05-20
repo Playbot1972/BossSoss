@@ -18,7 +18,7 @@ export default function Home() {
             them with simple recipes from the pit.
           </p>
           <div className="hero-actions">
-            <Link className="button" href="/shop">
+            <Link className="button orb-orbit-target" href="/shop">
               <SpinningOrb size="sm" />
               Shop sauces
             </Link>

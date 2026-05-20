@@ -19,10 +19,8 @@ export function HeroFlipCard({ sauceCount }: { sauceCount: number }) {
       onClick={() => setIsFlipped((current) => !current)}
     >
       <span className="hero-flip-card-inner">
-        <span className="hero-card hero-flip-face hero-flip-front">
-          <span className="hero-card-orb">
-            <SpinningOrb size="lg" />
-          </span>
+        <span className="hero-card hero-flip-face hero-flip-front orb-orbit-target">
+          <SpinningOrb size="lg" />
           <strong>{sauceCount}</strong>
           <span>sauces</span>
           <strong>3</strong>

@@ -25,6 +25,7 @@ export function AddToCartButton({ variantId }: { variantId: string }) {
         </select>
       </label>
       <button
+        className="orb-orbit-target"
         type="button"
         onClick={() => {
           addItem(variantId, quantity);

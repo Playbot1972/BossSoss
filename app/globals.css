@@ -195,23 +195,46 @@ button:disabled {
   color: var(--foreground);
 }
 
+.orb-orbit-target {
+  overflow: visible;
+  position: relative;
+}
+
+.orb-orbit {
+  animation: orb-orbit-ccw var(--orb-speed, 2.6s) linear infinite;
+  border-radius: inherit;
+  inset: var(--orb-inset, -0.38rem);
+  pointer-events: none;
+  position: absolute;
+  transform-origin: center;
+  z-index: 3;
+}
+
 .spinning-orb {
-  animation:
-    orb-spin 1.6s linear infinite,
-    orb-pulse 2.4s ease-in-out infinite;
   aspect-ratio: 1;
-  background:
-    radial-gradient(circle at 32% 30%, #ffffff 0 8%, transparent 9%),
-    conic-gradient(from 0deg, #ffffff, #f6b44b, #e31b23, #6f1f0e, #ffffff);
   border: 2px solid rgba(255, 255, 255, 0.72);
   border-radius: 999px;
   box-shadow:
     0 0 0 2px rgba(227, 27, 35, 0.18),
-    0 0 18px rgba(227, 27, 35, 0.55),
+    0 0 18px rgba(227, 27, 35, 0.58),
     inset 0 0 10px rgba(255, 255, 255, 0.42);
-  display: inline-block;
-  flex: 0 0 auto;
-  position: relative;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: var(--orb-size);
+}
+
+.spinning-orb::before {
+  animation: orb-spin 1.1s linear infinite;
+  background:
+    radial-gradient(circle at 32% 30%, #ffffff 0 8%, transparent 9%),
+    conic-gradient(from 0deg, #ffffff, #f6b44b, #e31b23, #6f1f0e, #ffffff);
+  content: "";
+  inset: -18%;
+  position: absolute;
 }
 
 .spinning-orb::after {
@@ -223,15 +246,27 @@ button:disabled {
 }
 
 .orb-sm {
-  width: 1.05rem;
+  --orb-inset: -0.32rem;
+  --orb-size: 0.95rem;
+  --orb-speed: 2.2s;
 }
 
 .orb-md {
-  width: 1.45rem;
+  --orb-inset: -0.45rem;
+  --orb-size: 1.25rem;
+  --orb-speed: 2.5s;
 }
 
 .orb-lg {
-  width: 3.4rem;
+  --orb-inset: -0.62rem;
+  --orb-size: 1.55rem;
+  --orb-speed: 3.2s;
+}
+
+@keyframes orb-orbit-ccw {
+  to {
+    transform: rotate(-360deg);
+  }
 }
 
 @keyframes orb-spin {
@@ -324,12 +359,6 @@ button:disabled {
   backface-visibility: hidden;
   inset: 0;
   position: absolute;
-}
-
-.hero-card-orb {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 0.75rem;
 }
 
 .hero-flip-back {
@@ -469,7 +498,6 @@ button:disabled {
   position: absolute;
 }
 
-.product-image .spinning-orb,
 .sauce-initials-pill {
   position: relative;
   z-index: 1;
@@ -528,7 +556,12 @@ button:disabled {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .orb-orbit,
   .spinning-orb {
+    animation: none;
+  }
+
+  .spinning-orb::before {
     animation: none;
   }
 }
