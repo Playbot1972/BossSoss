@@ -9,13 +9,44 @@ export function VisitorCounter() {
   const [visitorCount, setVisitorCount] = useState(startingVisitorCount);
 
   useEffect(() => {
-    const storedCount = window.localStorage.getItem(visitorCounterKey);
-    const nextCount = storedCount
-      ? Math.max(Number(storedCount) + 1, startingVisitorCount)
-      : startingVisitorCount;
+    const incrementLocalCounter = () => {
+      const storedCount = window.localStorage.getItem(visitorCounterKey);
+      const nextCount = storedCount
+        ? Math.max(Number(storedCount) + 1, startingVisitorCount)
+        : startingVisitorCount;
 
-    window.localStorage.setItem(visitorCounterKey, String(nextCount));
-    setVisitorCount(nextCount);
+      window.localStorage.setItem(visitorCounterKey, String(nextCount));
+      setVisitorCount(nextCount);
+    };
+
+    const incrementGlobalCounter = async () => {
+      try {
+        const response = await fetch("/api/visitors", {
+          method: "POST"
+        });
+
+        if (!response.ok) {
+          incrementLocalCounter();
+          return;
+        }
+
+        const payload = (await response.json()) as {
+          count?: number;
+          global?: boolean;
+        };
+
+        if (payload.global && typeof payload.count === "number") {
+          setVisitorCount(payload.count);
+          return;
+        }
+
+        incrementLocalCounter();
+      } catch {
+        incrementLocalCounter();
+      }
+    };
+
+    incrementGlobalCounter();
   }, []);
 
   return (

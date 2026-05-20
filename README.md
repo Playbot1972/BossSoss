@@ -9,6 +9,8 @@ Deployment guide: [docs/vercel-deploy.md](docs/vercel-deploy.md)
 
 Stripe go-live guide: [docs/stripe-go-live.md](docs/stripe-go-live.md)
 
+Visitor counter guide: [docs/visitor-counter.md](docs/visitor-counter.md)
+
 ## What is included
 
 - Three sauce options: Original Pitmaster, Sweet Heat, and Smoky Gold

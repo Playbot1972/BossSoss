@@ -6,6 +6,12 @@ export const runtime = "nodejs";
 const isConfigured = (value: string | undefined) =>
   Boolean(value && value !== "price_replace_me" && !value.includes("replace_me"));
 
+const hasVisitorCounterStore = () =>
+  Boolean(
+    (process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN) ||
+      (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN)
+  );
+
 const getStripeMode = () => {
   const secretKey = process.env.STRIPE_SECRET_KEY;
 
@@ -36,6 +42,7 @@ export async function GET() {
     stripeSecretKey: isConfigured(process.env.STRIPE_SECRET_KEY),
     stripeMode: getStripeMode(),
     automaticTaxEnabled: process.env.STRIPE_AUTOMATIC_TAX === "true",
+    visitorCounterStore: hasVisitorCounterStore(),
     priceIds: priceChecks
   };
 
