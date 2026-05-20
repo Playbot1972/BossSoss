@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CartLink } from "./CartLink";
+import { HeaderImageSpinner } from "./HeaderImageSpinner";
 
 export function Header() {
   return (
@@ -14,11 +15,7 @@ export function Header() {
           <CartLink />
         </nav>
       </div>
-      <img
-        className="header-pitmaster"
-        src="/images/pitmaster.jpg"
-        alt="Boss Soss pitmaster"
-      />
+      <HeaderImageSpinner />
     </header>
   );
 }

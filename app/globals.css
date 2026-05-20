@@ -100,6 +100,44 @@ main {
   width: min(36vw, 28.5rem);
 }
 
+.header-pitmaster-button {
+  background: transparent;
+  border: 0;
+  border-radius: 2.25rem;
+  box-shadow: none;
+  display: block;
+  justify-self: end;
+  padding: 0;
+}
+
+.header-pitmaster-button:hover {
+  background: transparent;
+  transform: none;
+}
+
+.header-pitmaster-button:focus-visible {
+  outline: 4px solid rgba(246, 180, 75, 0.9);
+  outline-offset: 6px;
+}
+
+.header-pitmaster-button.is-spinning .header-pitmaster {
+  animation: header-image-spin 900ms cubic-bezier(0.2, 0.85, 0.25, 1);
+}
+
+@keyframes header-image-spin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  42% {
+    transform: rotate(210deg) scale(1.04);
+  }
+
+  100% {
+    transform: rotate(720deg) scale(1);
+  }
+}
+
 .site-header nav {
   align-items: center;
   display: flex;
@@ -674,9 +712,13 @@ button:disabled {
     min-height: auto;
   }
 
-  .header-pitmaster {
+  .header-pitmaster-button {
     border-radius: 1.65rem;
     justify-self: end;
+  }
+
+  .header-pitmaster {
+    border-radius: 1.65rem;
     max-width: 24rem;
     width: min(42vw, 24rem);
   }
@@ -734,5 +776,9 @@ button:disabled {
   .header-pitmaster {
     border-radius: 1.25rem;
     width: min(44vw, 12rem);
+  }
+
+  .header-pitmaster-button {
+    border-radius: 1.25rem;
   }
 }

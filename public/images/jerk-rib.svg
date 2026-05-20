@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Jerk Rib graphic</title>
+  <desc id="desc">Red and gold Boss Soss style graphic reading Jerk Rib.</desc>
+  <rect width="960" height="1200" rx="120" fill="#120905"/>
+  <circle cx="480" cy="420" r="260" fill="#050505" stroke="#f6b44b" stroke-width="18"/>
+  <path d="M302 612c58-134 118-220 181-259 39-24 80-28 122-13 54 20 82 59 86 116 4 54-20 101-72 142-49 39-104 58-164 58-58 0-109-15-153-44z" fill="#e31b23"/>
+  <path d="M319 567c76 50 160 55 252 15 82-36 118-83 108-140-8-44-37-74-86-88-78-22-150 36-216 174z" fill="#f6b44b"/>
+  <path d="M340 547c72 25 139 24 200-3 59-26 87-56 83-89-3-27-23-45-60-55-59-16-112 28-161 133z" fill="#fff7ed"/>
+  <path d="M277 335c37 19 63 43 78 73M676 611c-41-8-75-23-102-45" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-width="18"/>
+  <text x="480" y="855" fill="#ffffff" font-family="Arial Black, Impact, sans-serif" font-size="132" font-weight="900" text-anchor="middle" letter-spacing="8">JERK</text>
+  <text x="480" y="1000" fill="#e31b23" font-family="Arial Black, Impact, sans-serif" font-size="142" font-weight="900" text-anchor="middle" letter-spacing="8">RIB</text>
+  <path d="M190 714h580M190 1044h580" stroke="#f6b44b" stroke-linecap="round" stroke-width="12"/>
+</svg>

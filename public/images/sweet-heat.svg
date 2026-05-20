@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Sweet Heat graphic</title>
+  <desc id="desc">Boss Soss style graphic reading Sweet Heat with flame artwork.</desc>
+  <rect width="960" height="1200" rx="120" fill="#fff7ed"/>
+  <circle cx="480" cy="430" r="278" fill="#050505" stroke="#e31b23" stroke-width="18"/>
+  <path d="M482 640c-116 0-210-89-210-200 0-69 38-126 94-163 20 61 58 80 94 37 25-31 34-91-3-156 105 34 123 124 105 193 38-14 73-42 91-97 49 53 67 108 67 164 0 123-100 222-238 222z" fill="#e31b23" stroke="#ffffff" stroke-linejoin="round" stroke-width="14"/>
+  <path d="M483 596c-58 0-106-44-106-98 0-36 22-66 52-84 7 39 26 58 52 30 15-18 19-50 1-91 59 24 69 74 58 114 24-8 43-25 53-58 28 31 39 62 39 93 0 53-49 94-149 94z" fill="#fff7ed"/>
+  <path d="M485 594c-30 0-54-23-54-51 0-19 11-35 27-45 3 21 13 30 27 15 8-9 9-26 1-47 31 13 37 40 31 60 13-4 23-14 29-31 15 16 21 33 21 49 0 29-26 50-82 50z" fill="#e31b23"/>
+  <text x="480" y="844" fill="#050505" font-family="Arial Black, Impact, sans-serif" font-size="124" font-weight="900" text-anchor="middle" letter-spacing="4">SWEET</text>
+  <text x="480" y="988" fill="#e31b23" font-family="Arial Black, Impact, sans-serif" font-size="132" font-weight="900" text-anchor="middle" letter-spacing="6">HEAT</text>
+  <path d="M190 714h580M190 1036h580" stroke="#f6b44b" stroke-linecap="round" stroke-width="12"/>
+</svg>
