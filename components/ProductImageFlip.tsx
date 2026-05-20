@@ -42,7 +42,7 @@ export function ProductImageFlip({
             <SpinningOrb size="md" />
             {initials}
           </span>
-          {canFlip ? <small>Tap to flip</small> : null}
+          {canFlip ? <small>Tap / hover to flip</small> : null}
         </span>
         {backImageSrc ? (
           <span className="product-image-face product-image-back">

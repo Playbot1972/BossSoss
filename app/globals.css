@@ -619,6 +619,11 @@ button:disabled {
   transform: rotateY(180deg);
 }
 
+.product-image-flip:not(:disabled):hover .product-image-flip-inner,
+.product-image-flip:not(:disabled):focus-visible .product-image-flip-inner {
+  transform: rotateY(180deg);
+}
+
 .product-image-face {
   align-items: center;
   backface-visibility: hidden;
