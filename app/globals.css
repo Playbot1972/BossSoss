@@ -47,7 +47,7 @@ body {
 :root[data-theme="dark"] body {
   background:
     linear-gradient(180deg, rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.68)),
-    url("/images/bbq.png") center / 50% auto fixed,
+    url("/images/bbq-flipped.png") center / cover fixed,
     var(--background);
   background-repeat: no-repeat;
 }
@@ -61,6 +61,16 @@ body {
   pointer-events: none;
   position: fixed;
   z-index: -1;
+}
+
+@media (max-width: 860px) {
+  :root[data-theme="dark"] body {
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.74)),
+      url("/images/bbq-flipped.png") center top / auto 100vh fixed,
+      var(--background);
+    background-repeat: no-repeat;
+  }
 }
 
 a {
