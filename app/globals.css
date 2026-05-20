@@ -47,8 +47,9 @@ body {
 :root[data-theme="dark"] body {
   background:
     linear-gradient(180deg, rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.68)),
-    url("/images/bbq.png") center / cover fixed,
+    url("/images/bbq.png") center / 50% auto fixed,
     var(--background);
+  background-repeat: no-repeat;
 }
 
 :root[data-theme="dark"] body::before {
