@@ -4,10 +4,20 @@ import { useState } from "react";
 import { useCart } from "./CartProvider";
 import { SpinningOrb } from "./SpinningOrb";
 
+const getStableOrbSpeed = (variantId: string) => {
+  const hash = Array.from(variantId).reduce(
+    (total, character) => total + character.charCodeAt(0),
+    0
+  );
+
+  return 1.8 + (hash % 9) * 0.17;
+};
+
 export function AddToCartButton({ variantId }: { variantId: string }) {
   const [quantity, setQuantity] = useState(1);
   const [added, setAdded] = useState(false);
   const { addItem } = useCart();
+  const orbSpeed = getStableOrbSpeed(variantId);
 
   return (
     <div className="add-to-cart">
@@ -33,7 +43,7 @@ export function AddToCartButton({ variantId }: { variantId: string }) {
           window.setTimeout(() => setAdded(false), 1800);
         }}
       >
-        <SpinningOrb size="sm" />
+        <SpinningOrb size="sm" speedSeconds={orbSpeed} />
         {added ? "Added" : "Add to cart"}
       </button>
     </div>
