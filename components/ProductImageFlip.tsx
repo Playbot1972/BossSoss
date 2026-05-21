@@ -8,24 +8,32 @@ type ProductImageFlipProps = {
   initials: string;
   backImageAlt: string;
   backImageSrc?: string;
+  frontImageSrc?: string;
 };
 
 type ProductImageStyle = CSSProperties & {
   "--product-back-image"?: string;
+  "--product-front-image"?: string;
 };
 
 export function ProductImageFlip({
   initials,
   backImageAlt,
-  backImageSrc
+  backImageSrc,
+  frontImageSrc
 }: ProductImageFlipProps) {
   const [showBack, setShowBack] = useState(false);
   const [isFlipping, setIsFlipping] = useState(false);
   const timeouts = useRef<number[]>([]);
   const canFlip = Boolean(backImageSrc);
-  const style: ProductImageStyle | undefined = backImageSrc
-    ? { "--product-back-image": `url("${backImageSrc}")` }
-    : undefined;
+  const style: ProductImageStyle = {
+    ...(backImageSrc
+      ? { "--product-back-image": `url("${backImageSrc}")` }
+      : {}),
+    ...(frontImageSrc
+      ? { "--product-front-image": `url("${frontImageSrc}")` }
+      : {})
+  };
 
   useEffect(() => {
     return () => {
@@ -81,6 +89,9 @@ export function ProductImageFlip({
             <small>Tap to return</small>
           ) : (
             <>
+              {frontImageSrc ? (
+                <span className="product-front-image" aria-hidden="true" />
+              ) : null}
               <span className="sauce-initials-pill orb-orbit-target">
                 <SpinningOrb size="md" />
                 {initials}

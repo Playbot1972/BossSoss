@@ -8,6 +8,10 @@ const sauceBackImages: Partial<Record<Sauce["id"], string>> = {
   "smoky-gold": "/images/pour-sauce.webp"
 };
 
+const sauceFrontImages: Partial<Record<Sauce["id"], string>> = {
+  original: "/images/soss-jar.png"
+};
+
 export function ProductCard({ sauce }: { sauce: Sauce }) {
   const initials = sauce.name
     .split(" ")
@@ -21,6 +25,7 @@ export function ProductCard({ sauce }: { sauce: Sauce }) {
         initials={initials}
         backImageAlt={`${sauce.name} sauce graphic`}
         backImageSrc={sauceBackImages[sauce.id]}
+        frontImageSrc={sauceFrontImages[sauce.id]}
       />
       <div>
         <p className="eyebrow">{sauce.tagline}</p>
