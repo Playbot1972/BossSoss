@@ -10,7 +10,8 @@ const sauceBackImages: Partial<Record<Sauce["id"], string>> = {
 
 const sauceFrontImages: Partial<Record<Sauce["id"], string>> = {
   original: "/images/soss-jar.png",
-  "sweet-heat": "/images/wangz.png"
+  "sweet-heat": "/images/wangz.png",
+  "smoky-gold": "/images/chopped.png"
 };
 
 export function ProductCard({ sauce }: { sauce: Sauce }) {
