@@ -717,16 +717,27 @@ button:disabled {
 }
 
 .product-front-image {
-  background: var(--product-front-image) center / contain no-repeat;
-  inset: 0.55rem;
-  opacity: 0.95;
+  align-self: center;
+  display: block;
+  filter: drop-shadow(0 16px 22px rgba(5, 5, 5, 0.34));
+  grid-area: 1 / 1;
+  height: auto;
+  justify-self: center;
+  max-height: 88%;
+  max-width: 95%;
+  object-fit: contain;
+  opacity: 1;
   position: absolute;
-  z-index: 0;
+  transform: translateY(-0.35rem);
+  width: auto;
+  z-index: 1;
 }
 
 .product-front-image + .sauce-initials-pill {
   align-self: end;
-  margin-bottom: 0.2rem;
+  justify-self: center;
+  margin-bottom: 0.45rem;
+  z-index: 2;
 }
 
 .product-image-flip.is-flipping .product-image-content {

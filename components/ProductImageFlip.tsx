@@ -90,7 +90,12 @@ export function ProductImageFlip({
           ) : (
             <>
               {frontImageSrc ? (
-                <span className="product-front-image" aria-hidden="true" />
+                <img
+                  className="product-front-image"
+                  src={frontImageSrc}
+                  alt=""
+                  aria-hidden="true"
+                />
               ) : null}
               <span className="sauce-initials-pill orb-orbit-target">
                 <SpinningOrb size="md" />
