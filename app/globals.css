@@ -787,6 +787,11 @@ button:disabled {
   padding-top: 1rem;
 }
 
+.variant-row {
+  border-radius: 1rem;
+  padding: 0.35rem;
+}
+
 .variant-row,
 .add-to-cart,
 .summary-row {
@@ -813,6 +818,33 @@ button:disabled {
   border-radius: 999px;
   color: var(--foreground);
   padding: 0.7rem;
+}
+
+:root[data-theme="dark"] .variant-row {
+  background: rgba(5, 5, 5, 0.62);
+  border: 1px solid rgba(246, 180, 75, 0.26);
+  box-shadow: inset 0 0 18px rgba(227, 27, 35, 0.12);
+}
+
+:root[data-theme="dark"] .variant-row strong {
+  color: #fff7ed;
+}
+
+:root[data-theme="dark"] .variant-row span {
+  color: #f6d1b4;
+}
+
+:root[data-theme="dark"] .add-to-cart select,
+:root[data-theme="dark"] .cart-line input {
+  background: #fff7ed;
+  border-color: rgba(246, 180, 75, 0.75);
+  color: #24120c;
+  font-weight: 900;
+}
+
+:root[data-theme="dark"] .add-to-cart select option {
+  background: #fff7ed;
+  color: #24120c;
 }
 
 .add-to-cart button {
