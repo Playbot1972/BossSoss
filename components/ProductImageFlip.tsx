@@ -69,7 +69,8 @@ export function ProductImageFlip({
       type="button"
       className={`product-image product-image-flip${
         isFlipping ? " is-flipping" : ""
-      }${showBack ? " is-showing-back" : ""
+      }${showBack ? " is-showing-back" : ""}${
+        frontImageSrc ? " has-front-image" : ""
       }`}
       onClick={flipProductImage}
       aria-label={
