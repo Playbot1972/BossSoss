@@ -23,8 +23,16 @@ const getStripeMode = () => {
     return "live";
   }
 
+  if (secretKey.startsWith("rk_live_")) {
+    return "restricted_live";
+  }
+
   if (secretKey.startsWith("sk_test_")) {
     return "test";
+  }
+
+  if (secretKey.startsWith("rk_test_")) {
+    return "restricted_test";
   }
 
   return "unknown";
