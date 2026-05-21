@@ -98,7 +98,8 @@ Any ZIP
 Confirm:
 
 - Checkout opens in Stripe
-- Shipping appears as expected
+- Local pickup appears as a free option
+- Standard shipping appears as $9.95
 - Cancel returns to `/cancel`
 - Success returns to `/success`
 

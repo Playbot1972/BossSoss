@@ -132,8 +132,8 @@ export function CartView() {
             <strong>{formatCurrency(subtotalCents)}</strong>
           </div>
           <p>
-            Shipping address collection happens in Stripe Checkout. Tax can be
-            enabled after Stripe Tax is configured.
+            Choose free local pickup or $9.95 standard shipping in Stripe
+            Checkout. Tax can be enabled after Stripe Tax is configured.
           </p>
           {error ? <p className="form-error">{error}</p> : null}
           <button

@@ -104,6 +104,26 @@ export async function POST(request: NextRequest) {
           shipping_rate_data: {
             type: "fixed_amount",
             fixed_amount: {
+              amount: 0,
+              currency: "usd"
+            },
+            display_name: "Local pickup",
+            delivery_estimate: {
+              minimum: {
+                unit: "business_day",
+                value: 1
+              },
+              maximum: {
+                unit: "business_day",
+                value: 2
+              }
+            }
+          }
+        },
+        {
+          shipping_rate_data: {
+            type: "fixed_amount",
+            fixed_amount: {
               amount: 995,
               currency: "usd"
             },

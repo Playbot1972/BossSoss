@@ -87,6 +87,7 @@ Checkout currently includes:
 
 - `mode: "payment"`
 - US shipping address collection
+- Free local pickup
 - Fixed standard shipping rate of $9.95
 - Optional automatic tax with `STRIPE_AUTOMATIC_TAX=true`
 - Promotion code support
